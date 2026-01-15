@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Assignment_01_FactoryMethod/Assignment_01_FactoryMethod.iml" filepath="$PROJECT_DIR$/Assignment_01_FactoryMethod/Assignment_01_FactoryMethod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment_02_AbstractFactory/Assignment_02_AbstractFactory.iml" filepath="$PROJECT_DIR$/Assignment_02_AbstractFactory/Assignment_02_AbstractFactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Suunnittelumallit.iml" filepath="$PROJECT_DIR$/Suunnittelumallit.iml" />
+    </modules>
+  </component>
+</project>
