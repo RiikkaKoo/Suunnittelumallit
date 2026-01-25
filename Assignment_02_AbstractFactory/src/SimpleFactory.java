@@ -2,17 +2,17 @@ public class SimpleFactory extends UIFactory {
 
     @Override
     public Button createButton(String text) {
-        return new ButtonA();
+        return new ButtonA(text);
         }
 
     @Override
     public Checkbox createCheckbox(String text) {
-        return new CheckboxA();
+        return new CheckboxA(text);
     }
 
     @Override
     public TextField createTextField(String text) {
-        return new TextFieldA();
+        return new TextFieldA(text);
     }
 
 }

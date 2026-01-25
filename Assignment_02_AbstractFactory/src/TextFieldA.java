@@ -1,8 +1,23 @@
 public class TextFieldA extends TextField {
+
+    public TextFieldA(String text) {
+        super(text);
+    }
+
     @Override
     public void display() {
-        System.out.println(".---------------------------.\n" +
-                           "|                           |\n" +
-                           "'---------------------------'");
+
+        String topBorder = ".---";
+        String bottomBorder = "'---";
+        for (int i = 0; i < super.text.length(); i++) {
+            topBorder += "-";
+            bottomBorder += "-";
+        }
+        topBorder += "---.";
+        bottomBorder += "---'";
+
+        System.out.println(topBorder +
+                           "\n|  '" + super.text + "'  |\n" +
+                           bottomBorder);
     }
 }

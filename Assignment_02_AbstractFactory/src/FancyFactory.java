@@ -2,16 +2,16 @@ public class FancyFactory extends UIFactory {
 
     @Override
     public Button createButton(String text) {
-        return new ButtonB();
+        return new ButtonB(text);
     }
 
     @Override
     public Checkbox createCheckbox(String text) {
-        return new CheckboxB();
+        return new CheckboxB(text);
     }
 
     @Override
     public TextField createTextField(String text) {
-        return new TextFieldB();
+        return new TextFieldB(text);
     }
 }
