@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization>
+    <department>
+        <name>Marketing</name>
+        <employy>
+            <name>Jane Smith</name>
+            <salary>3100</salary>
+        </employy>
+        <employy>
+            <name>Hannah Greene</name>
+            <salary>3000</salary>
+        </employy>
+        <employy>
+            <name>Frank Woods</name>
+            <salary>3000</salary>
+        </employy>
+        <department>
+            <name>Social Media Marketing</name>
+            <employy>
+                <name>Will Daniels</name>
+                <salary>2600</salary>
+            </employy>
+            <employy>
+                <name>Julie Hay</name>
+                <salary>2800</salary>
+            </employy>
+        </department>
+    </department>
+    <department>
+        <name>Development</name>
+        <department>
+            <name>Product Development</name>
+            <employy>
+                <name>Robert Cook</name>
+                <salary>2900</salary>
+            </employy>
+            <employy>
+                <name>Michael Brown</name>
+                <salary>2800</salary>
+            </employy>
+            <employy>
+                <name>Natalie Good</name>
+                <salary>2700</salary>
+            </employy>
+        </department>
+        <department>
+            <name>Business Development</name>
+            <department>
+                <name>Brand Development</name>
+                <employy>
+                    <name>Emily Spring</name>
+                    <salary>3100</salary>
+                </employy>
+                <employy>
+                    <name>Olivia Carlson</name>
+                    <salary>2800</salary>
+                </employy>
+            </department>
+            <department>
+                <name>Sales Development</name>
+                <employy>
+                    <name>Hans Highland</name>
+                    <salary>3200</salary>
+                </employy>
+                <employy>
+                    <name>Eric Creek</name>
+                    <salary>3000</salary>
+                </employy>
+            </department>
+        </department>
+    </department>
+</organization>
