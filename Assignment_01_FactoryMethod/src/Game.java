@@ -1,6 +1,6 @@
 public class Game {
     private static Map createMap() {
-        return new CityMap(6, 6);
+        return new WildernessMap(6, 6);
     }
 
     public static void main(String[] args) {

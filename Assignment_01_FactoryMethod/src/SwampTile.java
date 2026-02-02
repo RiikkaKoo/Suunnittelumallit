@@ -1,7 +1,7 @@
 public class SwampTile implements Tile {
 
     public Character getCharacter() {
-        return '*';
+        return '#';
     }
 
     public String getType() {
