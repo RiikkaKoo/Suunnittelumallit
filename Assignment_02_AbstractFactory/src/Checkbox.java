@@ -1,13 +1,8 @@
-public abstract class Checkbox {
+public abstract class Checkbox extends UIElement {
 
-    public String text;
 
     public Checkbox( String text) {
-        this.text = text;
-    }
-
-    public void setText(String newText) {
-        this.text = newText;
+       super(text);
     }
 
     public abstract void display();

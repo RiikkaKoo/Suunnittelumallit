@@ -1,13 +1,7 @@
-public abstract class TextField {
-
-    public String text;
+public abstract class TextField extends UIElement {
 
     public TextField( String text) {
-        this.text = text;
-    }
-
-    public void setText(String newText) {
-        this.text = newText;
+        super(text);
     }
 
     public abstract void display();
