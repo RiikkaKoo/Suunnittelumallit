@@ -8,6 +8,7 @@ public class Department extends Component {
         super(name);
     }
 
+    @Override
     public double getSalary() {
         double totalSalary = 0;
         for (Component child : this.children) {
@@ -34,7 +35,7 @@ public class Department extends Component {
             totalSalary += child.getSalary();
 
         }
-        System.out.print(super.name + " - Total salary: " + totalSalary);
+        System.out.print(super.name + " - Total salary: " + totalSalary + "€");
     }
 
     @Override
@@ -50,7 +51,6 @@ public class Department extends Component {
     @Override
     public Component getChild(int index) {
         return this.children.get(index);
-
     }
 
 
