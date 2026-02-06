@@ -14,15 +14,17 @@ public class WeatherStation extends Observable implements Runnable {
     }
 
     private void updateTemp() {
-
+        double tempChange = (Math.random() * (1.5 - (-1.5))) + (-1.5);
+        this.currentTemp += tempChange;
+        if (currentTemp > this.maxTemp) currentTemp = maxTemp;
+        else if (currentTemp < this.minTemp) currentTemp = minTemp;
     }
 
     @Override
     public void run() {
         try {
             while (true) {
-                double tempChange = (Math.random() * (1.5 - (-1.5))) + (-1.5);
-                this.currentTemp += tempChange;
+                updateTemp();
                 System.out.println("\n\n");
                 notifyObservers();
                 Thread.sleep((int)(Math.random() * (5000 - 1000)) + 1000);
