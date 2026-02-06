@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Assignment_01_FactoryMethod/Assignment_01_FactoryMethod.iml" filepath="$PROJECT_DIR$/Assignment_01_FactoryMethod/Assignment_01_FactoryMethod.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment_02_AbstractFactory/Assignment_02_AbstractFactory.iml" filepath="$PROJECT_DIR$/Assignment_02_AbstractFactory/Assignment_02_AbstractFactory.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment_03_Composite/Assignment_03_Composite.iml" filepath="$PROJECT_DIR$/Assignment_03_Composite/Assignment_03_Composite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment_04_Observer/Assignment_04_Observer.iml" filepath="$PROJECT_DIR$/Assignment_04_Observer/Assignment_04_Observer.iml" />
       <module fileurl="file://$PROJECT_DIR$/Suunnittelumallit.iml" filepath="$PROJECT_DIR$/Suunnittelumallit.iml" />
     </modules>
   </component>
