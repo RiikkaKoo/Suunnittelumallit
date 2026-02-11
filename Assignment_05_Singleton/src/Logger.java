@@ -40,6 +40,7 @@ public class Logger {
             try {
                 this.writer.write(text);
                 this.writer.newLine();
+                this.writer.flush();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -48,7 +49,6 @@ public class Logger {
 
     public void close() {
         try {
-            this.writer.flush();
             this.writer.close();
             this.writer = null;
         } catch (IOException e) {

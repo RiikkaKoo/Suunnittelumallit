@@ -15,7 +15,6 @@ public class Main {
 
         // Close the file and try to write (should not work)
         logger.close();
-
         logger.write("THIS SHOULD NOT BE WRITTEN TO THE FILE!");
 
         // Open the first file again. New lines should be appended after the existing ones.
