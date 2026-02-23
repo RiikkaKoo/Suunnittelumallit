@@ -7,7 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/Assignment_03_Composite/Assignment_03_Composite.iml" filepath="$PROJECT_DIR$/Assignment_03_Composite/Assignment_03_Composite.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment_04_Observer/Assignment_04_Observer.iml" filepath="$PROJECT_DIR$/Assignment_04_Observer/Assignment_04_Observer.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment_05_Singleton/Assignment_05_Singleton.iml" filepath="$PROJECT_DIR$/Assignment_05_Singleton/Assignment_05_Singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment_06_Decorator/Assignment_06_Decorator.iml" filepath="$PROJECT_DIR$/Assignment_06_Decorator/Assignment_06_Decorator.iml" />
       <module fileurl="file://$PROJECT_DIR$/Suunnittelumallit.iml" filepath="$PROJECT_DIR$/Suunnittelumallit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment_06_Decorator/test/test.iml" filepath="$PROJECT_DIR$/Assignment_06_Decorator/test/test.iml" />
     </modules>
   </component>
 </project>
