@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/Assignment_05_Singleton/Assignment_05_Singleton.iml" filepath="$PROJECT_DIR$/Assignment_05_Singleton/Assignment_05_Singleton.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment_06_Decorator/Assignment_06_Decorator.iml" filepath="$PROJECT_DIR$/Assignment_06_Decorator/Assignment_06_Decorator.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment_07_State/Assignment_07_State.iml" filepath="$PROJECT_DIR$/Assignment_07_State/Assignment_07_State.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment_08_TemplateMethod/Assignment_08_TemplateMethod.iml" filepath="$PROJECT_DIR$/Assignment_08_TemplateMethod/Assignment_08_TemplateMethod.iml" />
       <module fileurl="file://$PROJECT_DIR$/Suunnittelumallit.iml" filepath="$PROJECT_DIR$/Suunnittelumallit.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment_06_Decorator/test/test.iml" filepath="$PROJECT_DIR$/Assignment_06_Decorator/test/test.iml" />
     </modules>
