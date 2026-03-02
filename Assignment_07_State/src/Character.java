@@ -61,7 +61,7 @@ public class Character {
             System.out.println(i + ". " + options[i-1]);
         }
         int choice = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // Clean the scanner/absorb the empty line
         return choice;
     }
 
