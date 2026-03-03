@@ -52,8 +52,8 @@ public class HangmanGame extends Game {
             System.out.println("\nTRIES LEFT: " + (MAX_TRIES - currentTries));
             displayCurrentWord();
             System.out.println("\nGuessers, what do you want to do: ");
-            System.out.println("1. Guess a letter (Wrong guess = -" + (int) (1 + (playersLeft*1.75/10)) + ")");
-            System.out.println("2. Guess the word (Wrong guess = -" + (int) (2 + (playersLeft*1.75/10)) + ")");
+            System.out.println("1. Guess a letter (-" + (int) (1 + (playersLeft*1.75/10)) + " tries)");
+            System.out.println("2. Guess the word (Wrong guess = -" + (int) (2 + (playersLeft*1.75/10)) + " tries)");
             boolean isCorrectInput = false;
             while (!isCorrectInput) {
                 switch (scanner.nextInt()) {
