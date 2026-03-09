@@ -2,8 +2,13 @@ public class SelectionSorting implements SortingStrategy {
 
     @Override
     public void sort(int[] integerArray) {
-        // SelectionSorting algorithm code is from here:
-        // https://www.geeksforgeeks.org/dsa/selection-sort-algorithm-2/
+        /* SelectionSorting algorithm code is from here:
+        https://www.geeksforgeeks.org/dsa/selection-sort-algorithm-2/
+
+        1. Find the smallest element and swap it with the first element. This way we get the smallest element at its correct position.
+        2. Then find the smallest among remaining elements (or second smallest) and swap it with the second element.
+        3. We keep doing this until we get all elements moved to correct position.
+        */
 
             int n = integerArray.length;
             for (int i = 0; i < n - 1; i++) {
