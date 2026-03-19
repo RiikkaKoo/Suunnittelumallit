@@ -28,7 +28,7 @@ public class WeatherStation extends Observable implements Runnable {
             while (true) {
                 updateTemp(); // Update the temperature.
                 System.out.println("\n\n");
-                notifyObservers(); // Tell the observers to get the updated state and print out the data.
+                super.notifyObservers(); // Tell the observers to get the updated state and print out the data.
                 Thread.sleep((int)(Math.random() * (5000 - 1000)) + 1000); // Sleep for 1 to 5 seconds and repeat.
             }
         } catch (InterruptedException e) {
