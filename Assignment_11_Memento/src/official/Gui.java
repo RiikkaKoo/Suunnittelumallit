@@ -20,6 +20,7 @@ public class Gui extends Application {
     private ColorBox colorBox3;
     private CheckBox checkBox;
     private ListView<IMemento> historyList = new ListView<IMemento>();
+    private boolean ignoreSelection = false;
 
     public void start(Stage stage) {
 
@@ -96,16 +97,10 @@ public class Gui extends Application {
         historyBox.getChildren().addAll(historyList);
         historyList.setStyle("-fx-control-inner-background: #f0fffa;");
 
-        historyList.getSelectionModel().selectedItemProperty().addListener(
-                (ObservableValue<? extends IMemento> ov, IMemento old_val, IMemento new_val) -> {
-
-                    if (new_val != null) {
-                        String selectedItem = new_val.getTimestamp();
-                        int index = historyList.getSelectionModel().getSelectedIndex();
-                        System.out.println("Selected state: " + selectedItem + ", Index: " + index);
-                        controller.selectFromHistory(new_val);
-                    }
-                });
+        historyList.getSelectionModel().selectedItemProperty().addListener((obs, old, selected) -> {
+            if (ignoreSelection) return;
+            controller.selectFromHistory(selected);
+        });
 
         Stage stage = new Stage();
         Scene scene = new Scene(historyBox);
@@ -115,6 +110,7 @@ public class Gui extends Application {
     }
 
     public void displayHistory(ObservableList<IMemento> history) {
+        ignoreSelection = true;
         historyList.setItems(history);
         historyList.setCellFactory(lv -> new ListCell<IMemento>() {
             @Override
@@ -141,5 +137,6 @@ public class Gui extends Application {
                 }
             }
         });
+        ignoreSelection = false;
     }
 }

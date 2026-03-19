@@ -20,8 +20,8 @@ public class Controller {
     }
 
     public void setOption(int optionNumber, int choice) {
-        model.setLastChange("official.ColorBox " + optionNumber + " - Choice: " + choice);
         saveToHistory();
+        model.setLastChange("official.ColorBox " + optionNumber + " - Choice: " + choice);
         model.setOption(optionNumber, choice);
     }
 
@@ -30,8 +30,8 @@ public class Controller {
     }
 
     public void setIsSelected(boolean isSelected) {
-        model.setLastChange("Checkbox: " + isSelected);
         saveToHistory();
+        model.setLastChange("Checkbox: " + isSelected);
         model.setIsSelected(isSelected);
     }
 
@@ -47,11 +47,8 @@ public class Controller {
             System.out.println("Previous memento found in history");
 
             IMemento previousState = history.remove(history.size() -1);
-
-            // Add current state to redo list:
-            IMemento currentState = model.createMemento(true, previousState.getTimestamp(), previousState.getChange());
-            future.addFirst(currentState);
-
+            previousState.setIsRedo(true);
+            future.addFirst(previousState);
             model.restoreState(previousState);
             gui.updateGui();
             giveHistory();
@@ -65,13 +62,9 @@ public class Controller {
             System.out.println("Future memento found in history");
 
             IMemento futureState = future.removeFirst();
-
-            // Add current state to history list:
-            IMemento currentState = model.createMemento(false, futureState.getTimestamp(), futureState.getChange());
-            history.add(currentState);
-
+            futureState.setIsRedo(false);
+            history.add(futureState);
             model.restoreState(futureState);
-
             gui.updateGui();
             giveHistory();
         }
@@ -97,11 +90,6 @@ public class Controller {
         allStates.addAll(future);
 
         int selectedIndex = allStates.indexOf(selected);
-
-        if (selectedIndex == -1) return;
-        if (selectedIndex == allStates.size() - 1) {
-
-        }
 
         List<IMemento> newHistory = new ArrayList<>(allStates.subList(0, selectedIndex));
 
