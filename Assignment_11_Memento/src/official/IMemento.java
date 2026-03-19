@@ -1,3 +1,5 @@
+package official;
+
 public interface IMemento {
     // memento metadata methods
     String getTimestamp();

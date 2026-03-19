@@ -1,3 +1,5 @@
+package official;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -7,8 +9,8 @@ import java.util.List;
 public class Controller {
     private Model model;
     private Gui gui;
-    private List<IMemento> history; // Memento history
-    private List<IMemento> future; // Memento future
+    private List<IMemento> history; // official.Memento history
+    private List<IMemento> future; // official.Memento future
 
     public Controller(Gui gui) {
         this.model = new Model();
@@ -18,7 +20,7 @@ public class Controller {
     }
 
     public void setOption(int optionNumber, int choice) {
-        model.setLastChange("ColorBox " + optionNumber + " - Choice: " + choice);
+        model.setLastChange("official.ColorBox " + optionNumber + " - Choice: " + choice);
         saveToHistory();
         model.setOption(optionNumber, choice);
     }

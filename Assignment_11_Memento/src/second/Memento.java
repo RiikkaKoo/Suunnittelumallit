@@ -1,5 +1,4 @@
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+package second;
 
 public class Memento implements IMemento {
     private static int count = 0;
@@ -20,7 +19,7 @@ public class Memento implements IMemento {
 
         count++;
         this.id = count;
-        System.out.println("Memento created");
+        System.out.println("official.Memento created");
     }
 
     public int[] getOptions() {

@@ -1,3 +1,5 @@
+package official;
+
 import javafx.application.Application;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -75,12 +77,12 @@ public class Gui extends Application {
 
 
         stage.setScene(scene);
-        stage.setTitle("Memento Pattern Example");
+        stage.setTitle("official.Memento Pattern Example");
         stage.show();
     }
 
     public void updateGui() {
-        // called after restoring state from a Memento
+        // called after restoring state from a official.Memento
         colorBox1.setColor(controller.getOption(1));
         colorBox2.setColor(controller.getOption(2));
         colorBox3.setColor(controller.getOption(3));
@@ -108,7 +110,7 @@ public class Gui extends Application {
         Stage stage = new Stage();
         Scene scene = new Scene(historyBox);
         stage.setScene(scene);
-        stage.setTitle("Memento Pattern Example");
+        stage.setTitle("official.Memento Pattern Example");
         stage.show();
     }
 
