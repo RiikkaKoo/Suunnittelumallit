@@ -9,8 +9,8 @@ import java.util.List;
 public class Controller {
     private Model model;
     private Gui gui;
-    private List<IMemento> history; // official.Memento history
-    private List<IMemento> future; // official.Memento future
+    private List<IMemento> history; // Memento history
+    private List<IMemento> future; // Memento future
 
     public Controller(Gui gui) {
         this.model = new Model();
