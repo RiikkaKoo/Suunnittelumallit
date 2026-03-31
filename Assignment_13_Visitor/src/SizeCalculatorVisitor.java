@@ -11,6 +11,8 @@ public class SizeCalculatorVisitor implements FileSystemVisitor {
         accumulatedSize += file.getSize();
     }
 
+    // Directories themselves do not have size so they do not contribute to the accumulated size.
+    // Method prints info on how many elements it contains.
     @Override
     public void visit(Directory directory) {
         int elements = directory.getElements().size();

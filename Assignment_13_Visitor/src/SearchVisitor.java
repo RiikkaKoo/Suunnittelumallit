@@ -24,14 +24,14 @@ public class SearchVisitor implements FileSystemVisitor {
 
     @Override
     public void visit(File file) {
-        if (file.getFileName().contains(key)) {
+        if (file.getFileName().toUpperCase().contains(key.toUpperCase())) {
             foundFiles.add(file);
         }
     }
 
     @Override
     public void visit(Directory directory) {
-        if (directory.getDirectoryName().contains(key)) {
+        if (directory.getDirectoryName().toUpperCase().contains(key.toUpperCase())) {
             foundDirectories.add(directory);
         }
     }
