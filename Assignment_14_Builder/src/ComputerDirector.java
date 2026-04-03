@@ -6,7 +6,8 @@ public class ComputerDirector {
         this.compBuilder = builder;
     }
 
-    public void construct() {
+    public void constructComputer() {
+        compBuilder.chooseType();
         compBuilder.buildProcessor();
         compBuilder.buildRAM();
         compBuilder.buildHardDrive();
