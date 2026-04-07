@@ -5,23 +5,22 @@ public class Main {
     public static void main(String[] args) {
         NewDateInterface newDate = new CalendarToNewDateAdapter(Calendar.getInstance());
 
-        newDate.setMonth(2);
-        newDate.setDay(29);
+        // Set the date
         newDate.setYear(2023);
+        newDate.setMonth(12);
+        newDate.setDay(17);
 
-        System.out.println(newDate.getDay());
-        System.out.println(newDate.getMonth());
-        System.out.println(newDate.getYear());
+        // Print date
+        System.out.println("Original date:");
+        System.out.println(newDate.getDay() + "." + newDate.getMonth() + "." + newDate.getYear());
         System.out.println();
 
-        newDate.setMonth(5);
-        newDate.setDay(31);
-        newDate.setMonth(4);
-        newDate.setYear(2023);
+        // Advance 32 days
+        newDate.advanceDays(32);
 
-        System.out.println(newDate.getDay());
-        System.out.println(newDate.getMonth());
-        System.out.println(newDate.getYear());
+        // Print new date
+        System.out.println("Date after 32 days:");
+        System.out.println(newDate.getDay() + "." + newDate.getMonth() + "." + newDate.getYear());
         System.out.println();
     }
 
