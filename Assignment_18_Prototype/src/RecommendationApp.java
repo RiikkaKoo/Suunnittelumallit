@@ -26,6 +26,7 @@ public class RecommendationApp {
     }
 
     public int readInput(String[] options) {
+        System.out.println();
         java.lang.System.out.println("\nWhat do you want to do?:");
         for (int i = 1; i <= options.length; i++) {
             java.lang.System.out.println(i + ". " + options[i-1]);
@@ -36,18 +37,20 @@ public class RecommendationApp {
     }
 
     public void showRecommendations() {
+        System.out.println();
         System.out.println("Recommendation Lists:");
         for (Recommendation r : recommendations) {
             System.out.println();
             List<Book> books = r.getBooks();
             System.out.println("  " + r.getTargetAudience());
             for (Book b : books) {
-                System.out.println(b);
+                System.out.println("    " + b);
             }
         }
     }
 
     public void cloneARecommendation() {
+        System.out.println();
         System.out.println("Which Recommendation List do You want to clone?");
         int count = 0;
         for (Recommendation r : recommendations) {
@@ -73,6 +76,7 @@ public class RecommendationApp {
     }
 
     public void addABookToRecommendation() {
+        System.out.println();
         System.out.println("Do you want to create a new book or select an existing one?");
         System.out.println("1. New Book\n2. Select a book");
 
@@ -95,6 +99,7 @@ public class RecommendationApp {
     }
 
     public void createAndAddBook() {
+        System.out.println();
         scanner.nextLine(); // Clear the scanner
         System.out.println("Give the book title: ");
         String title = scanner.nextLine();
@@ -114,6 +119,7 @@ public class RecommendationApp {
     }
 
     public void selectABook() {
+        System.out.println();
         scanner.nextLine(); // Clear the scanner
         System.out.println("Select a book to add: ");
         int count = 0;
@@ -140,6 +146,7 @@ public class RecommendationApp {
     }
 
     public void removeABookFromRecommendation() {
+        System.out.println();
         System.out.println("Select a book to remove: ");
         int count = 0;
         for (Book b : selectedRecommendation.getBooks()) {
