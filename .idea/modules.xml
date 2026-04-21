@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/Assignment_14_Builder/Assignment_14_Builder.iml" filepath="$PROJECT_DIR$/Assignment_14_Builder/Assignment_14_Builder.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment_15_Adapter/Assignment_15_Adapter.iml" filepath="$PROJECT_DIR$/Assignment_15_Adapter/Assignment_15_Adapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment_18_Prototype/Assignment_18_Prototype.iml" filepath="$PROJECT_DIR$/Assignment_18_Prototype/Assignment_18_Prototype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment_19_Mediator/Assignment_19_Mediator.iml" filepath="$PROJECT_DIR$/Assignment_19_Mediator/Assignment_19_Mediator.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment_06_Decorator/test/test.iml" filepath="$PROJECT_DIR$/Assignment_06_Decorator/test/test.iml" />
     </modules>
   </component>
