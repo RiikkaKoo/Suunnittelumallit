@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Assignment_21_Facade" />
         <module name="Assignment_11_Memento" />
         <module name="Assignment_19_Mediator" />
       </profile>
