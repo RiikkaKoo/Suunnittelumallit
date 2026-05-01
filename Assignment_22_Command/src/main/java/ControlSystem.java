@@ -10,16 +10,7 @@ public class ControlSystem {
         this.gui = gui;
         this.currentRow = 0;
         this.currentColumn = 0;
-        this.pixels = new int[][]{
-                {0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0},
-        };
+        this.pixels = new int[8][8];
         gui.displayCursor(currentRow, currentColumn);
     }
 
