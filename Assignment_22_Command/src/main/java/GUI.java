@@ -5,8 +5,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -28,11 +26,15 @@ public class GUI extends Application {
         Command toggle = new TogglePixelCommand(controlSystem);
         Command generate = new GenerateCodeCommand(controlSystem);
 
+        KeyboardInvoker keyboardInvoker = new KeyboardInvoker(down, up, left, right, toggle);
+        ButtonInvoker buttonInvoker = new ButtonInvoker(generate);
+
         Button button = new Button("Generate");
         button.setOnAction((event) -> {
-            generate.execute();
+            buttonInvoker.generateCode();
         });
         button.setStyle("-fx-background-color: #efc164; -fx-font-size: 20; -fx-padding: 5");
+        button.setFocusTraversable(false);
 
         root.getChildren().addAll(grid, button);
         root.setAlignment(Pos.CENTER);
@@ -41,11 +43,11 @@ public class GUI extends Application {
 
         scene.addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
             switch (keyEvent.getCode()) {
-                case KeyCode.UP -> up.execute();
-                case KeyCode.DOWN -> down.execute();
-                case KeyCode.LEFT -> left.execute();
-                case KeyCode.RIGHT -> right.execute();
-                case KeyCode.SPACE -> toggle.execute();
+                case KeyCode.UP -> keyboardInvoker.cursorUp();
+                case KeyCode.DOWN -> keyboardInvoker.cursorDown();
+                case KeyCode.LEFT -> keyboardInvoker.cursorLeft();
+                case KeyCode.RIGHT -> keyboardInvoker.cursorRight();
+                case KeyCode.SPACE -> keyboardInvoker.togglePixel();
             }
         });
 
@@ -69,7 +71,8 @@ public class GUI extends Application {
                 rectangle.setWidth(80);
                 rectangle.setHeight(80);
                 rectangle.setFill(Color.WHITE);
-                rectangle.setStroke(Color.DARKGRAY);
+                rectangle.setStroke(Color.LIGHTGRAY);
+                rectangle.setStrokeWidth(1);
                 group.getChildren().add(rectangle);
                 pixels[row][column] = rectangle;
                 xCoord += 81;
@@ -86,12 +89,14 @@ public class GUI extends Application {
         // Clear the previous selection
         for (Rectangle[] rectRow : pixels) {
             for (Rectangle rectangle : rectRow) {
-                rectangle.setStroke(Color.DARKGRAY);
+                rectangle.setStroke(Color.LIGHTGRAY);
+                rectangle.setStrokeWidth(1);
             }
         }
 
         Rectangle currentRect = pixels[row][column];
         currentRect.setStroke(Color.RED);
+        currentRect.setStrokeWidth(1.25);
     }
 
     public void togglePixel(boolean isSelected, int row, int column) {

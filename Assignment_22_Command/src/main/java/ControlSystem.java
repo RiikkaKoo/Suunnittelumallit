@@ -75,6 +75,32 @@ public class ControlSystem {
     }
 
     public void generateCode() {
-        System.out.println("ControlSystem: GENERATE");
+        System.out.println("ControlSystem: GENERATE CODE\n");
+        System.out.println("int[][] pixelArt = {");
+        int rowCount = 0;
+        for (int[] row : pixels) {
+            if (rowCount == 0) {
+                System.out.print("    {");
+            } else {
+                System.out.print("\n    {");
+            }
+
+            int columnCount = 0;
+            for (int column : row) {
+                if (columnCount == 7) {
+                    System.out.print(column);
+                } else {
+                    System.out.print(column + ", ");
+                }
+                columnCount++;
+            }
+            if (rowCount == 7) {
+                System.out.print("}");
+            } else {
+                System.out.print("},");
+            }
+            rowCount++;
+        }
+        System.out.print("\n};");
     }
 }
